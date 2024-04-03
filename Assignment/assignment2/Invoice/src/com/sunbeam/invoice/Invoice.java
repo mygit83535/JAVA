@@ -4,7 +4,7 @@ public class Invoice {
 	    private String partNumber;
 	    private String partDescription;
 	    private int quantity;
-	    private double pricePerItem;
+	    private double price;
 	    
 	  
 	public Invoice() {
@@ -17,7 +17,7 @@ public class Invoice {
 		this.partNumber = partNumber;
 		this.partDescription = partDescription;
 		this.quantity = quantity;
-		this.pricePerItem = pricePerItem;
+		this.price = pricePerItem;
 	}
 
 
@@ -52,33 +52,34 @@ public class Invoice {
 
 
 	public double getPricePerItem() {
-		return pricePerItem;
+		return price;
 	}
 
 
-	public void setPricePerItem(double pricePerItem) {
-		this.pricePerItem = pricePerItem;
+	public void setPrice(double price) {
+		this.price = price;
 	}
 	   
 	public void setQty(int quantity)
 	{
 		if(quantity<0)
 		{
-			quantity=0
+			quantity=0;
 		}
 			this.quantity=quantity;
+	}
 			
 	public void setprice(double price)
 	{
 		if(price<0)
 		{
-			price=0
+			price=0;
 					
 		}
-		this.pricePerItem=price;
+		this.price=price;
+	}	
 		
-		
-		double calculateInvoice()
+		public double calculateInvoice()
 		{
 			return price*quantity;
 		
@@ -92,4 +93,4 @@ public class Invoice {
 	        
 
 
-}
+
